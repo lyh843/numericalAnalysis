@@ -12,6 +12,12 @@ e2 = np.abs(result2 - result0)
 e3 = np.abs(result3 - result0)
 e4 = np.abs(result4 - result0)
 
+print(f"result0: {result0}")
+print(f"result1: {result1}")
+print(f"result2: {result2}")
+print(f"result3: {result3}")
+print(f"result4: {result4}")
+
 print(e1)
 print(e2)
 print(e3)
