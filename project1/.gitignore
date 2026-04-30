@@ -1,0 +1,21 @@
+# Teacher-only reference solutions
+_teacher_solutions/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Outputs (generated at runtime)
+outputs*/
+
+# System
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
