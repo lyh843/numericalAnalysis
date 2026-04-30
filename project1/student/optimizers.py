@@ -16,10 +16,22 @@ class StudentSGD:
         self.param_groups = param_groups
 
     def zero_grad(self) -> None:
-        raise NotImplementedError("TODO: implement SGD zero_grad()")
+        # raise NotImplementedError("TODO: implement SGD zero_grad()")
+        for group in self.param_groups:
+            for param in group["params"]:
+                if param.grad is not None:
+                    param.grad.zero_()
+                
 
     def step(self) -> None:
-        raise NotImplementedError("TODO: implement SGD step()")
+        # raise NotImplementedError("TODO: implement SGD step()")
+        with torch.no_grad():
+            for group in self.param_groups:
+                lr = group["lr"]
+                for param in group["params"]:
+                    if param.grad is None:
+                        continue
+                    param -= lr * param.grad
 
 
 class StudentMomentum:
