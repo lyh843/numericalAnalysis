@@ -1,0 +1,8 @@
+2DGS Evaluation Summary
+optimizer: student_momentum
+initializer: random
+num_steps: 200
+image_size: 128
+mse: 0.08047271
+mae: 0.19918978
+psnr: 10.9435 dB

@@ -82,7 +82,7 @@ class SchedulerConfig:
 
 @dataclass
 class OptimizerConfig:
-    name: str = "torch_adam"
+    name: str = "student_muon"
     lr: float = 5e-2
     param_groups: ParamGroupConfig = field(default_factory=ParamGroupConfig)
 

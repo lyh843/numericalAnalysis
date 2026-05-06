@@ -1,0 +1,8 @@
+2DGS Evaluation Summary
+optimizer: torch_adam
+initializer: random
+num_steps: 200
+image_size: 128
+mse: 0.00105956
+mae: 0.01960821
+psnr: 29.7488 dB

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import torch
-import numpy as np
 
 from config import LossConfig, is_teacher
 
@@ -14,19 +13,19 @@ def mse_loss(prediction: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
 def l1_loss(prediction: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
     # raise NotImplementedError("TODO: implement l1_loss")
     diff = prediction - target
-    return torch.mean(np.abs(diff))
+    return torch.mean(torch.abs(diff))
 
 
 def charbonnier_loss(prediction: torch.Tensor, target: torch.Tensor, eps: float = 1e-3) -> torch.Tensor:
     # raise NotImplementedError("TODO: implement charbonnier_loss")
     diff = prediction - target
-    return torch.mean(np.sqrt(diff * diff + eps))
+    return torch.mean(torch.sqrt(diff * diff + eps))
 
 
 def mse_l1_loss(prediction: torch.Tensor, target: torch.Tensor, l1_weight: float = 0.2) -> torch.Tensor:
     # raise NotImplementedError("TODO: implement mse_l1_loss")
     diff = prediction - target
-    return torch.mean(diff * diff) + l1_weight * torch.mean(np.abs(diff))
+    return torch.mean(diff * diff) + l1_weight * torch.mean(torch.abs(diff))
     
 
 
