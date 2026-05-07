@@ -30,10 +30,15 @@ class SystemConfig:
 
 @dataclass
 class TargetConfig:
-    name: str = "image"           # "image" | "txt_gaussians" | "synthetic_shapes"
+    # name: str = "image"           # "image" | "txt_gaussians" | "synthetic_shapes"
+    name: str = "txt_gaussians"           # "image" | "txt_gaussians" | "synthetic_shapes"
     image_size: int = 128
-    image_path: str = "data/real_images/r1_flamingo_128.png"
-    gaussian_txt_path: str = "data/txt/s1_night_cityscape.txt"
+    # image_path: str = "data/real_images/r1_flamingo_128.png"
+    # image_path: str = "data/real_images/r2_starry_night_128.png"
+    # image_path: str = "data/real_images/r3_parkour_128.png"
+    # gaussian_txt_path: str = "data/txt/s1_night_cityscape.txt"
+    # gaussian_txt_path: str = "data/txt/s2_mandala.txt"
+    gaussian_txt_path: str = "data/txt/s3_coral_reef.txt"
 
 
 @dataclass
@@ -82,7 +87,7 @@ class SchedulerConfig:
 
 @dataclass
 class OptimizerConfig:
-    name: str = "student_muon"
+    name: str = "torch_adam"
     lr: float = 5e-2
     param_groups: ParamGroupConfig = field(default_factory=ParamGroupConfig)
 

@@ -35,9 +35,9 @@ def get_standard_setting() -> Config:
     config = _build_locked_config(num_steps=500)
 
     # Editable fields: students may tune these.
-    config.loss.name = "mse"
-    config.initializer.name = "random"
-    config.optimizer.name = "torch_adam"
+    config.loss.name = "mse_edge"
+    config.initializer.name = "grid"
+    config.optimizer.name = "student_adam"
     config.optimizer.lr = 5e-2
     config.scheduler.name = "constant"
     config.model.use_anisotropic = True
