@@ -28,6 +28,10 @@ def step_decay_schedule(step: int, total_steps: int) -> float:
     gamma = 0.8
     return 1.0 * gamma ** (math.floor((step - 1) / changeStep))
 
+def step_decay_schedule_task2B(step: int, total_steps: int) -> float:
+    limit = 0.005
+    return max(step_decay_schedule(step, total_steps), limit)
+
 
 def build_scheduler(config: SchedulerConfig) -> Callable[[int, int], float]:
     name = config.name
@@ -45,5 +49,7 @@ def build_scheduler(config: SchedulerConfig) -> Callable[[int, int], float]:
         return warmup_cosine_schedule
     if name == "step_decay":
         return step_decay_schedule
+    if name == "step_decay_task2B":
+        return step_decay_schedule_task2B
 
     raise ValueError(f"Unknown scheduler name: {name}")

@@ -36,10 +36,10 @@ def get_standard_setting() -> Config:
 
     # Editable fields: students may tune these.
     config.loss.name = "mse_edge"
-    config.initializer.name = "grid"
+    config.initializer.name = "importance"
     config.optimizer.name = "student_adam"
     config.optimizer.lr = 5e-2
-    config.scheduler.name = "constant"
+    config.scheduler.name = "warmup_cosine"
     config.model.use_anisotropic = True
     config.model.use_alpha = True
 
