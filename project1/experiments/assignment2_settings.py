@@ -20,10 +20,10 @@ def get_sprint_setting() -> Config:
     config = _build_locked_config(num_steps=100)
 
     # Editable fields: students may tune these.
-    config.loss.name = "mse"
-    config.initializer.name = "random"
-    config.optimizer.name = "torch_adam"
-    config.optimizer.lr = 5e-2
+    config.loss.name = "mse_edge"
+    config.initializer.name = "importanceTaskA"
+    config.optimizer.name = "student_adam"
+    config.optimizer.lr = 6.7e-2
     config.scheduler.name = "constant"
     config.model.use_anisotropic = True
     config.model.use_alpha = True
@@ -36,10 +36,10 @@ def get_standard_setting() -> Config:
 
     # Editable fields: students may tune these.
     config.loss.name = "mse_edge"
-    config.initializer.name = "importance"
+    config.initializer.name = "importanceTaskA"
     config.optimizer.name = "student_adam"
-    config.optimizer.lr = 5e-2
-    config.scheduler.name = "warmup_cosine"
+    config.optimizer.lr = 3e-2
+    config.scheduler.name = "constant"
     config.model.use_anisotropic = True
     config.model.use_alpha = True
 

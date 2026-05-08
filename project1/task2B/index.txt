@@ -1,9 +1,0 @@
-experiment1:
-loss: mse_edge
-initializer: grid
-optimizer: student_adam
-optimizer.lr: 5e-2
-scheduler: constant
-model: True - True
-
-AVERAGE: 31.9234

@@ -1,7 +1,0 @@
-Task2B average PSNR: 31.9234 dB
-R1_flamingo: 32.7424 dB
-R2_starry_night: 29.0600 dB
-R3_parkour: 31.3630 dB
-S1_night_cityscape: 30.7286 dB
-S2_mandala: 34.7297 dB
-S3_coral_reef: 32.9170 dB

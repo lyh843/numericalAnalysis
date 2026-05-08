@@ -13,6 +13,8 @@ def constant_schedule(step: int, total_steps: int) -> float:
 def cosine_schedule(step: int, total_steps: int) -> float:
     return 0.5 * (1.0 + math.cos((step - 1) * math.pi / total_steps))
 
+def cosine_schedule_task2A(step: int, total_steps: int) -> float:
+    return max(cosine_schedule(step, total_steps), 0.65)
 
 def warmup_cosine_schedule(step: int, total_steps: int) -> float:
     warmStep = 10
@@ -51,5 +53,7 @@ def build_scheduler(config: SchedulerConfig) -> Callable[[int, int], float]:
         return step_decay_schedule
     if name == "step_decay_task2B":
         return step_decay_schedule_task2B
+    if name == "cosine_task2A":
+        return cosine_schedule_task2A
 
     raise ValueError(f"Unknown scheduler name: {name}")
