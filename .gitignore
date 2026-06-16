@@ -1,0 +1,80 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments and local config
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+!.env.example
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Build and packaging outputs
+build/
+dist/
+*.egg-info/
+
+# Experiment outputs and logs
+output/
+outputs/
+outputs*/
+**/output/
+**/outputs/
+**/outputs*/
+runs/
+logs/
+wandb/
+tensorboard/
+
+# Model weights and generated tensors
+pretrained_models/
+**/pretrained_models/
+checkpoints/
+**/checkpoints/
+*.ckpt
+*.pth
+*.pt
+*.safetensors
+*.onnx
+
+# Generated media that is usually too large for git
+*.mp4
+*.avi
+*.mov
+*.webm
+
+# LaTeX temporary files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Windows alternate data streams copied into WSL/Linux
+*:Zone.Identifier
